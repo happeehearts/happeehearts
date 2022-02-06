@@ -34,10 +34,7 @@ const Footer = () => {
       allDatoCmsFooter {
         nodes {
           id: originalId
-          textLeft {
-            value
-          }
-          textRight {
+          textMiddle {
             value
           }
           locale
@@ -61,15 +58,11 @@ const Footer = () => {
           .map(
             ({
               id,
-              textLeft: { value: textLeftValue },
-              textRight: { value: textRightValue },
+              textMiddle: { value: textMiddleValue },
             }) => (
               <Fragment key={id}>
                 <Paragraph small centered as="div">
-                  <StructuredText data={textLeftValue} />
-                </Paragraph>
-                <Paragraph small centered as="div">
-                  <StructuredText data={textRightValue} />
+                  <StructuredText data={textMiddleValue} />
                 </Paragraph>
               </Fragment>
             )
