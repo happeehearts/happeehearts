@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "commit": "yarn run format && git add . && git commit -m"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.2",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "babel-jest": "^27.4.5",
     "babel-preset-gatsby": "^2.4.0",
-    "jest": "^27.4.5"
+    "jest": "^27.4.5",
+    "prettier": "2.5.1"
   }
 }

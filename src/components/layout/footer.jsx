@@ -55,18 +55,13 @@ const Footer = () => {
       <FooterContainer>
         {nodes
           .filter(({ locale }) => locale === currentLanguage)
-          .map(
-            ({
-              id,
-              textMiddle: { value: textMiddleValue },
-            }) => (
-              <Fragment key={id}>
-                <Paragraph small centered as="div">
-                  <StructuredText data={textMiddleValue} />
-                </Paragraph>
-              </Fragment>
-            )
-          )}
+          .map(({ id, textMiddle: { value: textMiddleValue } }) => (
+            <Fragment key={id}>
+              <Paragraph small centered as="div">
+                <StructuredText data={textMiddleValue} />
+              </Paragraph>
+            </Fragment>
+          ))}
       </FooterContainer>
     </SectionWrapper>
   );
